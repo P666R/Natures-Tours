@@ -65,6 +65,7 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+
   &__close {
     &:link,
     &:visited {
@@ -80,11 +81,6 @@
     }
 
     &:hover {
-      color: variables.$color-primary;
-      transform: scale(1.2);
-    }
-
-    &:active {
       color: variables.$color-primary;
       transform: scale(1.2);
     }

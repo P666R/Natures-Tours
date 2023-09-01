@@ -1,3 +1,18 @@
+/*
+0-600px : phone
+600-900px : tablet portrait
+900-1200px : tablet landscape
+1200-1800px : normal (is where our normal styles apply)
+1800px + : big desktop
+
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -44,6 +59,21 @@
 
 html {
   font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -628,10 +658,6 @@ body {
   line-height: 1;
 }
 .popup__close:hover {
-  color: #55c57a;
-  transform: scale(1.2);
-}
-.popup__close:active {
   color: #55c57a;
   transform: scale(1.2);
 }
