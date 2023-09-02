@@ -24,11 +24,21 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
+
+    @include mixins.respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__left {
     width: 33%;
     display: table-cell;
+
+    @include mixins.respond(tab-port) {
+      width: 50%;
+      display: flex;
+    }
   }
 
   &__right {
@@ -37,6 +47,10 @@
     vertical-align: middle;
     padding: 3rem 4rem 2.2rem;
     background-color: variables.$color-white;
+
+    @include mixins.respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &__img {
@@ -78,6 +92,11 @@
       display: inline-block;
       transition: all 0.2s;
       line-height: 1;
+
+      @include mixins.respond(tab-port) {
+        top: 1.5rem;
+        right: 1.5rem;
+      }
     }
 
     &:hover {
